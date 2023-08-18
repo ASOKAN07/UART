@@ -12,4 +12,11 @@ The below diagram is an illustration of  a high-level block diagram of the UART 
 
 ![image](https://github.com/ASOKAN07/UART/assets/140265974/95cb33f2-2467-4e09-9651-aeb1dc11a9d6)
 
+The complete RTL of the UART core path is mentioned below.
+UART_Design/*.sv
 
+UART Verification  architecture  
+------------------------------------------------------
+There are 2 parts in the UART core, which is the transmitter and receiver path. These 2 Blocks work independently so separate test benches are implemented for each
+
+![image](https://github.com/ASOKAN07/UART/assets/140265974/28e00314-6649-4ddd-8db3-988b3586a23d)
