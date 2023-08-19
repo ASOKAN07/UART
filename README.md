@@ -49,4 +49,6 @@ Scoreboard: This is a Comparator that compares the data which is received by the
 
 coverage module: This Finds which functionalities/features of the design have been exercised by the tests. This is useful in constrained random verification (CRV) to know what features have been covered by a set of tests in a regression
 
+Path: UART/UART_Verifi_TB/UART_RX_TB/
+
 
