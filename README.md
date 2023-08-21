@@ -26,7 +26,7 @@ There are 2 parts in the UART core, which is the transmitter and receiver path. 
 
 UART_Rx Verification  architecture  
 ------------------------------------------------------
-![image](https://github.com/ASOKAN07/UART/assets/140265974/4f99c71f-f4a9-4c51-b5d6-317632cc88e1)
+![image](https://github.com/ASOKAN07/UART/assets/140265974/d5f9ca15-bb61-422f-9562-7e87ab14f486)
 
 
 Rx Environment: This is the component that contains the handles of testbench components such as UART_Rx Generator, Rx rd mon, Rx_wr_mon, UART_Rx_wr_drv, Rx Reference Model, scoreboard, and UART_Rx rd_drv. And the components are communicated via mailbox communication.
