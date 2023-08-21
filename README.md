@@ -23,6 +23,27 @@ There are 2 parts in the UART core, which is the transmitter and receiver path. 
 
 
 
+**Tx Environment**: This is the component that contains the handles of testbench components such as UART_Tx Generator, Tx rd mon, Tx_wr_mon, UART_Tx_wr_drv, Tx Reference Model, and, scoreboard. And the components are communicated via mailbox communication.
+
+**Tx Generator**: This is the component that generates the UART_Tx signals. It can be configured to generate a variety of data and dives the data to the DUT_UART_Tx through UART_Tx_wr_Driver.
+
+**Transaction**: This is the component that has the variable to generate constraint-based random data to generate possible values to drive.
+
+**Scoreboard:** This is a Comparator that compares the data which is received by the dut with the data sent by the UART_Tx Testbench
+
+**Tx Reference Model**: This is a component to store the Reference data of the UART_Tx DUT. It is used to verify that the UART_Tx signals received by the UART_Tx rd monitor are correct.
+
+**Tx wr dev**: This is the device that writes the UART_Tx signals to the UART_Tx DUT.
+
+**Tx_wr_mon:** This is the monitor that verifies that the UART_Tx signals are written correctly to the UART_Tx DUT.
+
+**Tx_rd_mon:** This is the monitor that verifies that the UART_Tx signals are read  from the UART_Tx DUT.
+
+**Interface:** This is the interface between the UART_Tx DUT and the UART_Tx testbench. It is responsible for transferring the UART_UART_Tx signals between the two modules DUT and Testbech.
+
+**Coverage module:** This Finds which functionalities/features of the design have been exercised by the tests. This is useful in constrained random verification (CRV) to know what features have been covered by a set of tests in a regression
+
+**Path:** UART/UART_Verifi_TB/UART_TX_TB
 
 UART_Rx Verification  architecture  
 ------------------------------------------------------
@@ -52,5 +73,6 @@ Rx Environment: This is the component that contains the handles of testbench com
 **Coverage module:** This Finds which functionalities/features of the design have been exercised by the tests. This is useful in constrained random verification (CRV) to know what features have been covered by a set of tests in a regression
 
 **Path:** UART/UART_Verifi_TB/UART_RX_TB/
+
 
 
