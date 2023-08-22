@@ -9,21 +9,15 @@ class rx_generator;
   $display("UART Rx Generator is Build");
   endfunction 
   
-  virtual task start(); $display("UART RX Generator is Running");
-   fork 
-     begin 
-       for(int i=0;i< rx_no_of_transaction;i++)  begin 
-         if(!trans.randomize())
-    begin  
-$display("Genetaror :Randomize is not set properly",$time);     
-    end
-//trans.rx_reg={trans.stop_bit,trans.parity,trans.data_1,trans.stop_bit};
-         data2send=new trans;
-         gen2rx_drv.put(data2send);       
-  grn_2cov.put(data2send);
-       end
-       end
-   join_none
-  endtask
-  
+virtual task start(); $display("UART RX Generator is Running");
+   fork begin 
+    for(int i=0;i< rx_no_of_transaction;i++)  begin 
+    if(!trans.randomize())  
+    $display("Genetaror :Randomize is not set properly",$time);     
+    data2send=new trans;
+    gen2rx_drv.put(data2send);       
+    grn_2cov.put(data2send);
+    end end
+  join_none
+endtask  
 endclass
