@@ -21,9 +21,6 @@ logic done_rx;
 logic baud_trig_rx,baud_trig_tx;
 b_clk   b_c(clk,reset,dvsr,baud_trig_tx,baud_trig_rx);
 uart_rx rx1(clk,reset,rx,done_rx,d_out_rx,baud_trig_rx);
-  fifo rx_ff(clk,reset,done_rx,rd_en,d_out_rx,d_out,rx_empty,fifo_full);
-  //uart_tx  tx1(clk,reset,empty,baud_trig_tx,ff_dout,tx_done,tx);  
-
-//fifo  tx_ff(clk,reset,wr_en,tx_done,d_in,ff_dout,empty,tx_full);
+fifo rx_ff(clk,reset,done_rx,rd_en,d_out_rx,d_out,rx_empty,fifo_full);
 
 endmodule
