@@ -8,20 +8,15 @@ int rx_no_of_write_trans=0;
 
 program  test_rx(UART_IF DUT_IF,input clk);  
  
-class my_trans extends transaction; 
-   
-  bit [1:0] count;
-  
-  function void pre_randomize();
-      
-      bad_parity_bit.constraint_mode(0);
-    count_odd.constraint_mode(0);
-      count_even.constraint_mode(0);
-      good_parity_bit.constraint_mode(1);
-    endfunction
-    
-  endclass
-  
+class my_trans extends transaction;    
+bit [1:0] count;
+function void pre_randomize();
+ bad_parity_bit.constraint_mode(0);
+ count_odd.constraint_mode(0);
+ count_even.constraint_mode(0);
+ good_parity_bit.constraint_mode(1);
+endfunction
+endclass
   
 environment env_h;
 my_trans my_tr;
@@ -37,10 +32,10 @@ initial begin
 end 
   
  task reset_dut();
-   @(posedge clk) DUT_IF.reset=1'b1;
-   repeat(5)   @(posedge clk);
+  @(posedge clk) DUT_IF.reset=1'b1;
+  repeat(5)   @(posedge clk);
   DUT_IF.reset=1'b0;
-   DUT_IF.rx=1'b1;
+  DUT_IF.rx=1'b1;
   $display("Restting DUT----------- ");
   endtask
 endprogram 
