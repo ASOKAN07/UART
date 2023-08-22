@@ -5,7 +5,6 @@ int rx_no_of_write_trans=0;
 //`define EVEN_PARITY
 `include "rx_environment.sv"
 
-
 program  test_rx(UART_IF DUT_IF,input clk);  
   
 class my_trans extends transaction; 
@@ -24,12 +23,9 @@ my_trans my_tr;
 initial begin 
   reset_dut();
   env_h=new(DUT_IF,DUT_IF,DUT_IF,DUT_IF);
-  
   env_h.build();
   my_tr=new();
-  
-  $display("-------------Odd Parity Data Generating---------------");
-  
+  $display("-------------Odd Parity Data Generating---------------");  
   env_h.rx_gen_h.trans =my_tr;
   env_h.run();
 end 
