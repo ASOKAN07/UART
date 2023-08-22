@@ -2,7 +2,6 @@ int rx_no_of_transaction =30;
 int rx_no_of_read_trans=0;
 int rx_no_of_write_trans=0;
 `define ODD_PARITY
-//`define EVEN_PARITY
 `include "rx_environment.sv"
 
 program  test_rx(UART_IF DUT_IF,input clk);  
