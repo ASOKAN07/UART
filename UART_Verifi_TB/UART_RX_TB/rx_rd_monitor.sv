@@ -21,6 +21,5 @@ class rx_rd_monitor;
    trans.d_out=RDM_IF.RDM_RX_CB.d_out;
    rdmon2rx_sb.put(trans);
      
-  //$display($time ,"Transcation get from rd montor %h",trans.d_out);          
    end  join_none endtask
 endclass
