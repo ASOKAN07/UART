@@ -84,9 +84,20 @@ Simulated verification output for Designed UART
 Verified the current design using various test cases with a designed verification environment as mentioned in the verification architecture of respective UART_Tx and UART_Rx.
 These various test cases are written to cover even parity combinations initially (also cover's all its respective boundary conditions) and cover all other possible DATA input combinations using Random constrain based test cases. 
 
-/UART/UART_RX/random/home1/BRN34/MSTharus/VLSI_RN/SV_LABS/UART/UART_RX/sim/urgReport/dashboard.html
+The current UART was simulated in EDA playground and its respective generated output waveform are
+
+**The Output waveform for UART_Tx for random test cases **
+
+<Waveform  >
 
 
+**The Output waveform for UART_Rx for random test cases **
+
+< Waveform>
+
+
+
+  
 
 
 
