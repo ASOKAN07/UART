@@ -96,9 +96,17 @@ The current UART was simulated in EDA playground and its respective generated ou
 < Waveform>
 
 
+Functional Coverage 
+-------------------
 
+The verification is complete with the coverage model having 100% coverage of functional aspects.
+The current design also covers all its functionality through the written random tests resulting in 100% functional coverage, with the help of the Questasim tool.
+
+<Outpyt coverage Tx>
   
-
+<Outpyt coverage Rx> 
+  
+Initially, the coverage was reported as 76% which was improved with the addition and updation of various other cover bins, thus singing the coverage by 100%.
 
 
 
