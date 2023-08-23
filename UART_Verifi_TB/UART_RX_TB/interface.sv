@@ -28,13 +28,9 @@ interface UART_IF(input bit clk,baud_clk_tx);
     output rd_en;
    
   endclocking
-  
-  
   modport WRD_RX_M(clocking WRD_RX_CB);
   modport WRM_RX_M(clocking WRM_RX_CB);
   modport RDM_RX_M(clocking RDM_RX_CB);
   modport RDD_RX_M(clocking RDD_RX_CB);   
-   
   
-
 endinterface 
