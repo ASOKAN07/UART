@@ -112,7 +112,7 @@ The current design also covers all its functionality through the written random 
 
 **The Output Coverage report for UART_Rx for random test cases**
 
+![Uploading image.png…]()
 
-![image](https://github.com/ASOKAN07/UART/assets/140265974/70006a71-1c0c-4637-8ad3-55607e4cc6b2)
   
 Initially, the coverage was reported as 76% which was improved with the addition and updation of various other cover bins, thus singing the coverage by 100%.
