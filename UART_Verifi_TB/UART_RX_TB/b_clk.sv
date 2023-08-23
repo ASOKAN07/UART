@@ -18,8 +18,7 @@ b_reg_rx<=b_next_rx;
 end
 
 assign b_next_rx=(b_reg_rx==dvsr)?1:b_reg_rx+1;
-  assign baud_trig_rx= (b_reg_rx==11'd2);
-
+assign baud_trig_rx= (b_reg_rx==11'd2);
 assign b_next_tx=(b_reg_tx==dvsr)?1:b_reg_tx+1;
-  assign baud_trig_tx= (b_reg_tx==11'd1);
+assign baud_trig_tx= (b_reg_tx==11'd1);
 endmodule 
