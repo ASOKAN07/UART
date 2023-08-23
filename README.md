@@ -112,6 +112,7 @@ The current design also covers all its functionality through the written random 
 
 **The Output Coverage report for UART_Rx for random test cases**
 
+
 ![Uploading image.png…]()
 
   
