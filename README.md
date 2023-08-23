@@ -4,6 +4,7 @@ UART Design and Verification - System Verilog
 Designed UART does Tx and Rx at the baud clock of 9600 baud rate and 12 Mhz
 Implemented FIFO to support different clock domain interface at the external interface of UART Tx and Rx.
 The common FIFO has a depth of 16, each having 8-bit data storage
+The current design is based on an even parity data frame.
 
 UART RTL architecture  
 ------------------------------------------------------
@@ -18,6 +19,9 @@ UART_Design/*.sv
 UART Verification  architecture  
 ------------------------------------------------------
 There are 2 parts in the UART core, which is the transmitter and receiver path. These 2 Blocks work independently so separate test benches are implemented for each
+
+UART_Tx Verification  architecture  
+------------------------------------------------------
 
 ![image](https://github.com/ASOKAN07/UART/assets/140265974/28e00314-6649-4ddd-8db3-988b3586a23d)
 
@@ -73,6 +77,18 @@ Rx Environment: This is the component that contains the handles of testbench com
 **Coverage module:** This Finds which functionalities/features of the design have been exercised by the tests. This is useful in constrained random verification (CRV) to know what features have been covered by a set of tests in a regression
 
 **Path:** UART/UART_Verifi_TB/UART_RX_TB/
+
+
+Simulated verification output for Designed UART
+--------------------------------------------------------
+Verified the current design using various test cases with a designed verification environment as mentioned in the verification architecture of respective UART_Tx and UART_Rx.
+These various test cases are written to cover even parity combinations initially (also cover's all its respective boundary conditions) and cover all other possible DATA input combinations using Random constrain based test cases. 
+
+file:///D:/UART/UART_RX/random/home1/BRN34/MSTharus/VLSI_RN/SV_LABS/UART/UART_RX/sim/urgReport/dashboard.html
+
+
+
+
 
 
 
