@@ -16,15 +16,16 @@ The below diagram is an illustration of  a high-level block diagram of the UART 
 The complete RTL of the UART core path is mentioned below.
 UART_Design/*.sv
 
+
 UART Verification  architecture  
 ------------------------------------------------------
 There are 2 parts in the UART core, which is the transmitter and receiver path. These 2 Blocks work independently so separate test benches are implemented for each
+
 
 UART_Tx Verification  architecture  
 ------------------------------------------------------
 
 ![image](https://github.com/ASOKAN07/UART/assets/140265974/28e00314-6649-4ddd-8db3-988b3586a23d)
-
 
 
 **Tx Environment**: This is the component that contains the handles of testbench components such as UART_Tx Generator, Tx rd mon, Tx_wr_mon, UART_Tx_wr_drv, Tx Reference Model, and, scoreboard. And the components are communicated via mailbox communication.
@@ -48,6 +49,7 @@ UART_Tx Verification  architecture
 **Coverage module:** This Finds which functionalities/features of the design have been exercised by the tests. This is useful in constrained random verification (CRV) to know what features have been covered by a set of tests in a regression
 
 **Path:** UART/UART_Verifi_TB/UART_TX_TB
+
 
 UART_Rx Verification  architecture  
 ------------------------------------------------------
@@ -88,14 +90,14 @@ The current UART was simulated in EDA playground and its respective generated ou
 
 **The Output waveform for UART_Tx for random test cases**
 
+
 <img width="943" alt="TX_random_wafeform" src="https://github.com/ASOKAN07/UART/assets/140265974/120b85a3-4de2-4ca5-bdbb-93d15b32fb72">
 
 
 **The Output waveform for UART_Rx for random test cases**
 
+
 <img width="943" alt="RX_random_waveform" src="https://github.com/ASOKAN07/UART/assets/140265974/b02d2ae6-060f-4a7b-95d6-24cb36e47fef">
-
-
 
 Functional Coverage 
 -------------------
@@ -103,10 +105,14 @@ Functional Coverage
 The verification is complete with the coverage model having 100% coverage of functional aspects.
 The current design also covers all its functionality through the written random tests resulting in 100% functional coverage, with the help of the Questasim tool.
 **The Output Coverage report for UART_Tx for random test cases**
-![Screenshot (3)](https://github.com/ASOKAN07/UART/assets/140265974/d5f69f83-8eda-456f-bc01-712d95270857)
+
+
+![image](https://github.com/ASOKAN07/UART/assets/140265974/de86e532-ebcc-464e-af73-df18a3b03c98)
+
 
 **The Output Coverage report for UART_Rx for random test cases**
-![Screenshot (4)](https://github.com/ASOKAN07/UART/assets/140265974/b9ed7d6e-f7f6-461b-b66b-69647b227cd1)
 
+
+![image](https://github.com/ASOKAN07/UART/assets/140265974/70006a71-1c0c-4637-8ad3-55607e4cc6b2)
   
 Initially, the coverage was reported as 76% which was improved with the addition and updation of various other cover bins, thus singing the coverage by 100%.
